@@ -36,12 +36,19 @@ npx serve .
 2. Framework preset: **Other**. Build command: *(empty)*. Output directory: `.` (root).
 3. Deploy.
 
+## Token
+
+Contract address: `99uqT7jwNRtoQxyAj8FNsdnGPYraiQ7Ex7848Kfzpump`
+
+It appears in three places in `index.html`: the hero box, the "How to Buy" box, and the
+DexScreener link in the footer.
+
 ## Things to fill in before launch
 
-- Contract address — currently the placeholder `xxxxxxxxxxxxxxxxxxxxxxxxxxxxx` in
-  `index.html` (two places: hero and the "How to Buy" section).
-- Social links — the `href="#"` placeholders in the footer (X, DexScreener).
-- Tokenomics numbers in the `#tokenomics` section if the real distribution differs.
+- X / Twitter link — still an `href="#"` placeholder in the footer.
+- Tokenomics numbers in the `#tokenomics` section. The 90 / 6 / 4 split is placeholder
+  copy; a pump.fun launch puts the whole supply on the bonding curve, so this should
+  either be corrected or dropped.
 
 ## Disclaimer
 
