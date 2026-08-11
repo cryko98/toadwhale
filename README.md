@@ -30,7 +30,7 @@ npx serve .
 
 - Contract address — currently the placeholder `xxxxxxxxxxxxxxxxxxxxxxxxxxxxx` in
   `index.html` (two places: hero and the "How to Buy" section).
-- Social links — the `href="#"` placeholders in the footer (X, Telegram, DexScreener).
+- Social links — the `href="#"` placeholders in the footer (X, DexScreener).
 - Tokenomics numbers in the `#tokenomics` section if the real distribution differs.
 
 ## Disclaimer
