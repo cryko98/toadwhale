@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Toad Whale — $TOADWHALE on Solana</title>
+<meta name="description" content="The Toad Whale is the deep-space guardian of the $TOAD whales. One pill. One pond. Infinite depth. $TOADWHALE on Solana." />
+<meta name="theme-color" content="#05070d" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="The Toad Whale — $TOADWHALE on Solana" />
+<meta property="og:description" content="The whales of $TOAD have found their totem. Take the green pill." />
+<meta property="og:image" content="toadwhalelogo.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Toad Whale — $TOADWHALE" />
+<meta name="twitter:description" content="The whales of $TOAD have found their totem. Take the green pill." />
+<meta name="twitter:image" content="toadwhalelogo.jpg" />
+
+<link rel="icon" href="toadwhalelogo.jpg" type="image/jpeg" />
+<link rel="apple-touch-icon" href="toadwhalelogo.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<canvas id="space" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="spotlight" aria-hidden="true"></div>
+<div class="scan" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top">
+    <span class="nav__orb"><img src="toadwhalelogo.jpg" alt="" /></span>
+    <span class="nav__name">THE TOAD WHALE</span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#legend">Legend</a>
+    <a href="#doctrine">Doctrine</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#ranks">Ranks</a>
+    <a href="#buy">How to Buy</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav__right">
+    <a class="btn btn--sm btn--primary" href="#buy"><span>Buy $TOADWHALE</span></a>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<main id="top">
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <div class="pill-tag reveal">
+        <span class="dot"></span> Live on Solana
+      </div>
+
+      <h1 class="hero__title reveal">
+        <span class="line" data-scramble="THE">THE</span>
+        <span class="line grad" data-scramble="TOAD WHALE">TOAD WHALE</span>
+      </h1>
+
+      <p class="hero__sub reveal">
+        $TOAD is flying. Somewhere below the surface, the big bags move in silence.
+        <strong>The Toad Whale</strong> is their totem — the deep-space beast that carries the
+        green pill for every serious holder of the pond.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary" href="#buy"><span>Take the Green Pill</span></a>
+        <a class="btn btn--ghost" href="#legend"><span>Read the Legend</span></a>
+      </div>
+
+      <div class="ca reveal" id="caBox">
+        <div class="ca__label">Contract Address</div>
+        <div class="ca__row">
+          <code id="caText">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+          <button class="ca__copy" id="caCopy" aria-label="Copy contract address">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__stats reveal">
+        <div class="stat"><b data-count="1000000000">1,000,000,000</b><span>Total Supply</span></div>
+        <div class="stat"><b data-count="100" data-suffix="%">100%</b><span>LP Burned</span></div>
+        <div class="stat"><b data-count="0" data-suffix="%">0%</b><span>Tax</span></div>
+      </div>
+    </div>
+
+    <!-- Portal / logo -->
+    <div class="hero__art">
+      <div class="portal" id="portal">
+        <div class="portal__ring"></div>
+        <div class="portal__ring portal__ring--2"></div>
+        <div class="portal__halo"></div>
+        <div class="portal__img">
+          <img src="toadwhalelogo.jpg" alt="The Toad Whale holding the green pill in deep space" />
+          <div class="portal__shine"></div>
+        </div>
+
+        <svg class="bolts" viewBox="0 0 400 400" aria-hidden="true">
+          <defs>
+            <filter id="bglow" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <g filter="url(#bglow)" stroke="#bfe9ff" fill="none" stroke-linecap="round">
+            <path class="bolt b1" d="M200 200 L150 168 L172 150 L112 108 L138 96 L64 52" stroke-width="2.4"/>
+            <path class="bolt b2" d="M200 200 L252 176 L236 154 L300 120 L276 106 L344 66" stroke-width="2.4"/>
+            <path class="bolt b3" d="M200 200 L154 232 L178 250 L124 292 L150 300 L84 344" stroke-width="2"/>
+            <path class="bolt b4" d="M200 200 L248 236 L228 252 L288 292 L262 302 L330 348" stroke-width="2"/>
+            <path class="bolt b5" d="M200 200 L206 140 L188 132 L200 60" stroke-width="1.6"/>
+            <path class="bolt b6" d="M200 200 L196 262 L214 272 L200 340" stroke-width="1.6"/>
+          </g>
+        </svg>
+
+        <div class="rock r1"></div>
+        <div class="rock r2"></div>
+        <div class="rock r3"></div>
+        <div class="rock r4"></div>
+      </div>
+    </div>
+  </div>
+
+  <a class="scrolldown" href="#legend" aria-label="Scroll"><span></span></a>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>$TOADWHALE</span><i>◆</i><span>THE POND HAS A DEEP END</span><i>◆</i><span>TAKE THE GREEN PILL</span><i>◆</i>
+    <span>WHALES ONLY</span><i>◆</i><span>$TOADWHALE</span><i>◆</i><span>THE POND HAS A DEEP END</span><i>◆</i>
+    <span>TAKE THE GREEN PILL</span><i>◆</i><span>WHALES ONLY</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ============ LEGEND ============ -->
+<section class="section" id="legend">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">01 — Origin</span>
+      <h2>The Legend of <span class="grad">The Toad Whale</span></h2>
+    </div>
+
+    <div class="legend">
+      <div class="legend__col reveal">
+        <p class="lead">
+          $TOAD did what nobody expected. The little green coin left the pond and went vertical —
+          charts bent, timelines flooded, and a new class of holder was born.
+        </p>
+        <p>
+          But every ascension leaves a shadow. While the pond celebrated, the biggest bags kept
+          buying in silence. No posts. No targets. Just size. The community gave them a name they
+          never asked for: <strong>the whales</strong>.
+        </p>
+        <p>
+          Deep beneath the pond, where the water turns to vacuum and asteroids drift like lily pads,
+          something answered to that name. Half toad, half whale, wrapped in a red sweater and
+          yellow overalls, it surfaced holding a single glowing capsule — the
+          <strong class="hl">green pill</strong>.
+        </p>
+        <p>
+          It doesn't compete with $TOAD. It <em>belongs</em> to it. The Toad Whale is what a $TOAD
+          whale becomes when the bag gets too big for the pond: the totem, the mascot and the
+          mirror of every top holder on the leaderboard.
+        </p>
+        <blockquote>
+          "You didn't ape the pond. You <em>became</em> the water."
+          <cite>— inscription on the capsule</cite>
+        </blockquote>
+      </div>
+
+      <div class="legend__cards">
+        <article class="tilt card reveal">
+          <div class="card__icon">🐸</div>
+          <h3>Born from the pond</h3>
+          <p>$TOADWHALE exists because $TOAD flew. The bigger the pond, the deeper its whale — the two stories can't be told apart.</p>
+        </article>
+        <article class="tilt card reveal">
+          <div class="card__icon">💊</div>
+          <h3>The green pill</h3>
+          <p>One capsule. No roadmap, no promises, no team unlocks. Swallow it and you stop watching charts as a spectator.</p>
+        </article>
+        <article class="tilt card reveal">
+          <div class="card__icon">⚡</div>
+          <h3>Charged in the void</h3>
+          <p>Lightning follows the beast through the asteroid field. Volatility isn't a bug down here — it's the weather.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOCTRINE ============ -->
+<section class="section section--alt" id="doctrine">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">02 — The Whale Doctrine</span>
+      <h2>Strongly recommended for<br /><span class="grad">every top $TOAD holder</span></h2>
+      <p class="sec-sub">If your name sits on the $TOAD leaderboard, this coin was written about you.
+        The Toad Whale is the symbol of the bags that moved the pond — and a symbol is worth holding.</p>
+    </div>
+
+    <div class="doctrine">
+      <article class="d-card tilt reveal">
+        <span class="d-num">I</span>
+        <h3>Your bag already has a mascot</h3>
+        <p>Top holders carried $TOAD through every dip. The Toad Whale simply gives that role a face —
+          holding it is how the pond knows who you are.</p>
+      </article>
+      <article class="d-card tilt reveal">
+        <span class="d-num">II</span>
+        <h3>The whale badge</h3>
+        <p>A $TOADWHALE bag next to a $TOAD bag reads instantly on-chain: not a tourist, not a flipper.
+          Deep-end resident.</p>
+      </article>
+      <article class="d-card tilt reveal">
+        <span class="d-num">III</span>
+        <h3>Same pond, second lily pad</h3>
+        <p>You already believe in the frog. This is the same thesis with a smaller cap and a bigger
+          myth attached to it.</p>
+      </article>
+      <article class="d-card tilt reveal">
+        <span class="d-num">IV</span>
+        <h3>Culture compounds</h3>
+        <p>Memes don't survive on utility, they survive on story. The whale story is the one part of
+          $TOAD that nobody else can copy.</p>
+      </article>
+    </div>
+
+    <div class="callout reveal">
+      <div class="callout__glow" aria-hidden="true"></div>
+      <div class="callout__body">
+        <h3>Are you a $TOAD whale?</h3>
+        <p>Then consider this an open invitation from the deep. Grab your capsule, keep it in the same
+          wallet as your frogs, and let the leaderboard do the talking.</p>
+      </div>
+      <a class="btn btn--primary" href="#buy"><span>Claim your capsule</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOKENOMICS ============ -->
+<section class="section" id="tokenomics">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">03 — Tokenomics</span>
+      <h2>Clean as <span class="grad">deep water</span></h2>
+    </div>
+
+    <div class="tok">
+      <div class="tok__grid">
+        <div class="tok__item reveal"><b>1,000,000,000</b><span>Total supply</span></div>
+        <div class="tok__item reveal"><b>0 / 0</b><span>Buy / Sell tax</span></div>
+        <div class="tok__item reveal"><b>Burned</b><span>Liquidity</span></div>
+        <div class="tok__item reveal"><b>Revoked</b><span>Mint authority</span></div>
+        <div class="tok__item reveal"><b>100%</b><span>Fair launch</span></div>
+        <div class="tok__item reveal"><b>Solana</b><span>Chain</span></div>
+      </div>
+
+      <div class="tok__viz reveal">
+        <div class="orb">
+          <div class="orb__core"><img src="toadwhalelogo.jpg" alt="" /></div>
+          <div class="orb__ring"></div>
+          <div class="orb__ring orb__ring--b"></div>
+          <ul class="orb__legend">
+            <li><i style="--c:var(--green)"></i> 90% Liquidity pool</li>
+            <li><i style="--c:var(--cyan)"></i> 6% Community &amp; memes</li>
+            <li><i style="--c:var(--yellow)"></i> 4% CEX / market making</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RANKS ============ -->
+<section class="section section--alt" id="ranks">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">04 — Depth chart</span>
+      <h2>How deep are <span class="grad">you</span>?</h2>
+      <p class="sec-sub">Every holder gets a depth. The further down you go, the quieter it gets.</p>
+    </div>
+
+    <div class="ranks">
+      <div class="rank reveal"><span class="rank__d">0 m</span><b>Tadpole</b><p>Just landed on the lily pad. Watching the chart like a movie.</p></div>
+      <div class="rank reveal"><span class="rank__d">-120 m</span><b>Croaker</b><p>Bought the dip once and told everyone about it twice.</p></div>
+      <div class="rank reveal"><span class="rank__d">-800 m</span><b>Deep Toad</b><p>Stopped checking the price. Started checking the holders list.</p></div>
+      <div class="rank reveal"><span class="rank__d">-3,000 m</span><b>Whale</b><p>Moves the candle by existing. Never posts the entry.</p></div>
+      <div class="rank reveal rank--max"><span class="rank__d">-∞</span><b>The Toad Whale</b><p>Doesn't hold the pond. Is the pond.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO BUY ============ -->
+<section class="section" id="buy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">05 — Four steps</span>
+      <h2>How to <span class="grad">buy $TOADWHALE</span></h2>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__n">1</span>
+        <h3>Get a Solana wallet</h3>
+        <p>Install Phantom or Solflare on desktop or mobile and back up your seed phrase offline.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">2</span>
+        <h3>Fund it with SOL</h3>
+        <p>Buy SOL on any exchange and send it to your wallet address. Keep a little extra for fees.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">3</span>
+        <h3>Open a DEX</h3>
+        <p>Head to Jupiter or Raydium, connect the wallet and paste the contract address below.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">4</span>
+        <h3>Swap &amp; dive</h3>
+        <p>Swap SOL for $TOADWHALE, confirm the transaction, and welcome to the deep end.</p>
+      </li>
+    </ol>
+
+    <div class="ca ca--wide reveal">
+      <div class="ca__label">Contract Address</div>
+      <div class="ca__row">
+        <code id="caText2">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+        <button class="ca__copy" id="caCopy2" aria-label="Copy contract address">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span>Copy</span>
+        </button>
+      </div>
+      <p class="ca__warn">Always verify the address before swapping. There is only one Toad Whale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section--alt" id="faq">
+  <div class="wrap wrap--narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">06 — Questions from the surface</span>
+      <h2>FAQ</h2>
+    </div>
+
+    <div class="faq">
+      <details class="reveal">
+        <summary>Is $TOADWHALE officially connected to $TOAD?</summary>
+        <p>No. $TOADWHALE is an independent community memecoin built as a tribute to the $TOAD
+          whales. There is no affiliation, endorsement or shared team — just shared culture.</p>
+      </details>
+      <details class="reveal">
+        <summary>Why should a top $TOAD holder buy this?</summary>
+        <p>Because the coin is literally about them. The Toad Whale is the symbol of the bags that
+          carried the pond, and holding the symbol next to the original is the strongest flex on the
+          leaderboard. It stays a meme, not an investment product.</p>
+      </details>
+      <details class="reveal">
+        <summary>What is the green pill?</summary>
+        <p>The capsule in the whale's hand. It represents the moment a holder stops trading the pond
+          and starts believing in it. Purely symbolic — do not eat.</p>
+      </details>
+      <details class="reveal">
+        <summary>Is there a tax or a team allocation?</summary>
+        <p>Zero buy and sell tax, liquidity burned, mint authority revoked. Everything worth checking
+          is verifiable on-chain.</p>
+      </details>
+      <details class="reveal">
+        <summary>Is there a roadmap?</summary>
+        <p>Memes, charts and depth. The only roadmap is the community — anything else would be a
+          promise, and whales don't make promises.</p>
+      </details>
+      <details class="reveal">
+        <summary>Can I lose money?</summary>
+        <p>Yes. $TOADWHALE has no intrinsic value and no expectation of financial return. Buy it for
+          the meme, size it like a joke, and never risk what you can't afford to lose.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="finale">
+  <div class="finale__glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <img class="finale__img reveal" src="toadwhalelogo.jpg" alt="The Toad Whale" />
+    <h2 class="reveal">The pond is loud.<br /><span class="grad">The deep end is louder.</span></h2>
+    <p class="reveal">Grab the capsule and get comfortable in the dark.</p>
+    <div class="reveal"><a class="btn btn--primary btn--lg" href="#buy"><span>Buy $TOADWHALE</span></a></div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <span class="nav__orb"><img src="toadwhalelogo.jpg" alt="" /></span>
+      <div>
+        <b>THE TOAD WHALE</b>
+        <span>$TOADWHALE · Solana</span>
+      </div>
+    </div>
+    <nav class="footer__links">
+      <a href="#legend">Legend</a>
+      <a href="#doctrine">Doctrine</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#buy">How to Buy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="footer__social">
+      <a href="#" aria-label="X (Twitter)" title="X">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.9 2H22l-7.1 8.1L23 22h-6.6l-5.2-6.8L5.3 22H2.2l7.6-8.7L1.5 2h6.8l4.7 6.2L18.9 2Zm-1.1 18h1.7L7.3 3.8H5.5L17.8 20Z"/></svg>
+      </a>
+      <a href="#" aria-label="Telegram" title="Telegram">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.2c-.3.3-.5.5-.9.5l.3-4.6 8.4-7.6c.4-.3-.1-.5-.6-.2L7.2 13 2.7 11.6c-1-.3-1-1 .2-1.5l17.6-6.8c.8-.3 1.5.2 1.4 1Z"/></svg>
+      </a>
+      <a href="#" aria-label="DexScreener" title="Chart">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 16V9"/><path d="M11 16V4"/><path d="M16 16v-5"/><path d="M21 16v-9"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap footer__legal">
+    <p>$TOADWHALE is a community meme token with no intrinsic value or expectation of financial
+      return. It is not affiliated with, endorsed by, or connected to $TOAD or any other project.
+      Nothing on this site is financial advice. Crypto assets are volatile — do your own research
+      and never invest more than you can afford to lose.</p>
+    <span>© <span id="year">2026</span> The Toad Whale. Made in the deep.</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Contract address copied</div>
+
+<script src="script.js"></script>
+</body>
+</html>
