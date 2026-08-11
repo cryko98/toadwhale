@@ -8,6 +8,11 @@
   const $  = (s, c) => (c || document).querySelector(s);
   const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
 
+  /* Failsafe: if any effect below blows up, the copy must still be readable. */
+  window.addEventListener('error', () => {
+    document.documentElement.classList.remove('js');
+  });
+
   /* ---------------------------------------------------------------- year */
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -22,10 +27,12 @@
 
     function build() {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = canvas.clientWidth = window.innerWidth;
-      h = canvas.clientHeight = window.innerHeight;
-      canvas.width = w * dpr;
-      canvas.height = h * dpr;
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const density = Math.min(220, Math.round((w * h) / 7000));
