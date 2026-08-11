@@ -357,6 +357,60 @@
     }
   }
 
+  /* -------------------------------------------------------- meme lightbox */
+  const lb = $('#lightbox');
+  const wall = $('#wall');
+  if (lb && wall) {
+    const items = $$('.wall__item', wall);
+    const lbImg = $('#lbImg'), lbCap = $('#lbCap');
+    let idx = 0, lastFocus = null;
+
+    const show = (i) => {
+      idx = (i + items.length) % items.length;
+      const img = $('img', items[idx]);
+      lbImg.src = img.getAttribute('src');
+      lbImg.alt = img.getAttribute('alt') || '';
+      lbCap.textContent = items[idx].dataset.caption || '';
+    };
+
+    const open = (i) => {
+      lastFocus = document.activeElement;
+      show(i);
+      lb.hidden = false;
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => lb.classList.add('show'));
+      $('#lbClose').focus();
+    };
+
+    const close = () => {
+      lb.classList.remove('show');
+      document.body.style.overflow = '';
+      setTimeout(() => { lb.hidden = true; lbImg.src = ''; }, 320);
+      if (lastFocus) lastFocus.focus();
+    };
+
+    items.forEach((it, i) => {
+      it.setAttribute('tabindex', '0');
+      it.setAttribute('role', 'button');
+      it.addEventListener('click', () => open(i));
+      it.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+      });
+    });
+
+    $('#lbClose').addEventListener('click', close);
+    $('#lbPrev').addEventListener('click', () => show(idx - 1));
+    $('#lbNext').addEventListener('click', () => show(idx + 1));
+    lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(idx - 1);
+      else if (e.key === 'ArrowRight') show(idx + 1);
+    });
+  }
+
   /* ------------------------------------------- one open FAQ item at a time */
   const faqItems = $$('.faq details');
   faqItems.forEach(d => {

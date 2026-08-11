@@ -6,11 +6,21 @@ the whales of $TOAD.
 Plain static site — no build step, no dependencies.
 
 ```
-index.html          markup
-styles.css          all styling
-script.js           starfield canvas, reveals, tilt, counters, copy-to-clipboard
-toadwhalelogo.jpg   logo + favicon + OG image
+index.html             markup
+styles.css             all styling
+script.js              starfield canvas, reveals, tilt, counters, copy, lightbox
+toadwhalelogo.jpg      logo + favicon + OG image
+toadwhale-palm.jpg     used in the Legend section
+toadwhale-torch.jpg    used in the Doctrine call-out
+toadwhale-reef.jpg     used as the Depth chart banner
+toadwhale-cosmos.jpg   used as the closing section backdrop
+meme-*.jpg             meme wall only
 ```
+
+Every image also appears in the meme wall (`#memes`), which opens a keyboard-navigable
+lightbox — arrow keys to move, Esc to close. To add a meme, drop the file in the root and
+copy one `<figure class="wall__item">` block in `index.html`; the script picks it up
+automatically.
 
 ## Local preview
 
