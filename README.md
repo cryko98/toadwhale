@@ -43,9 +43,13 @@ Contract address: `99uqT7jwNRtoQxyAj8FNsdnGPYraiQ7Ex7848Kfzpump`
 It appears in three places in `index.html`: the hero box, the "How to Buy" box, and the
 DexScreener link in the footer.
 
+## Links
+
+- X: [@thetoadwhale_](https://x.com/thetoadwhale_)
+- Chart: DexScreener, linked from the footer
+
 ## Things to fill in before launch
 
-- X / Twitter link — still an `href="#"` placeholder in the footer.
 - Tokenomics numbers in the `#tokenomics` section. The 90 / 6 / 4 split is placeholder
   copy; a pump.fun launch puts the whole supply on the bonding curve, so this should
   either be corrected or dropped.
