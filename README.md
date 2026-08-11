@@ -1,4 +1,4 @@
-# The Toad Whale — $TOADWHALE
+# The Toad Whale — $WHOAD
 
 Official landing page for **The Toad Whale**, a Solana community memecoin built as a tribute to
 the whales of $TOAD.
@@ -35,5 +35,5 @@ npx serve .
 
 ## Disclaimer
 
-$TOADWHALE is a meme token with no intrinsic value or expectation of financial return, and it is
+$WHOAD is a meme token with no intrinsic value or expectation of financial return, and it is
 not affiliated with or endorsed by $TOAD.
