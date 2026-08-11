@@ -1,4 +1,4 @@
-# The Toad Whale — $TOADWHALE
+# The Toad Whale — $WHOAD
 
 Official landing page for **The Toad Whale**, a Solana community memecoin built as a tribute to
 the whales of $TOAD.
@@ -10,7 +10,7 @@ index.html             markup
 styles.css             all styling
 script.js              starfield canvas, reveals, tilt, counters, copy, lightbox
 toadwhalelogo.jpg      logo + favicon + OG image
-toadwhale-pill.jpg     used in the Legend section
+toadwhale-palm.jpg     used in the Legend section
 toadwhale-torch.jpg    used in the Doctrine call-out
 toadwhale-reef.jpg     used as the Depth chart banner
 toadwhale-cosmos.jpg   used as the closing section backdrop
@@ -36,15 +36,25 @@ npx serve .
 2. Framework preset: **Other**. Build command: *(empty)*. Output directory: `.` (root).
 3. Deploy.
 
+## Token
+
+Contract address: `99uqT7jwNRtoQxyAj8FNsdnGPYraiQ7Ex7848Kfzpump`
+
+It appears in three places in `index.html`: the hero box, the "How to Buy" box, and the
+DexScreener link in the footer.
+
+## Links
+
+- X: [@thetoadwhale_](https://x.com/thetoadwhale_)
+- Chart: DexScreener, linked from the footer
+
 ## Things to fill in before launch
 
-- Contract address — currently the placeholder `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` in
-  `index.html` (two places: the hero box and the "How to Buy" box).
-- The chart link — the `href="#"` placeholder on the footer icon.
 - Tokenomics numbers in the `#tokenomics` section. The 90 / 6 / 4 split is placeholder
-  copy — correct or drop it to match the real launch.
+  copy; a pump.fun launch puts the whole supply on the bonding curve, so this should
+  either be corrected or dropped.
 
 ## Disclaimer
 
-$TOADWHALE is a meme token with no intrinsic value or expectation of financial return, and it is
+$WHOAD is a meme token with no intrinsic value or expectation of financial return, and it is
 not affiliated with or endorsed by $TOAD.
