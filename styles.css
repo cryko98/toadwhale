@@ -482,21 +482,19 @@ blockquote cite{ display:block; margin-top:10px; font-size:13px; font-style:norm
 .shot:hover{ border-color:rgba(147,255,94,.45); box-shadow:0 30px 70px -30px rgba(94,199,58,.6); }
 .shot:hover img{ transform:scale(1.06); filter:saturate(1.08); }
 
-/* wide cinematic band */
+/* framed showcase image — shown whole, never cropped */
 .strip{
-  margin:0 0 26px; position:relative; border-radius:var(--r-l); overflow:hidden;
-  border:1px solid var(--line);
+  margin:0 auto 26px; max-width:940px; position:relative;
+  border-radius:var(--r-l); overflow:hidden; border:1px solid var(--line);
+  box-shadow:0 30px 70px -34px rgba(0,0,0,.95);
+  transition:border-color .45s, box-shadow .45s;
 }
-.strip img{
-  width:100%; height:clamp(190px,26vw,330px); object-fit:cover; object-position:50% 42%;
-  transition:transform 1.1s var(--ease);
-}
-.strip:hover img{ transform:scale(1.05); }
+.strip img{ width:100%; height:auto; display:block; transition:transform 1.1s var(--ease); }
+.strip:hover{ border-color:rgba(147,255,94,.4); box-shadow:0 34px 80px -32px rgba(94,199,58,.5); }
+.strip:hover img{ transform:scale(1.03); }
 .strip::after{
   content:''; position:absolute; inset:0; pointer-events:none;
-  background:
-    linear-gradient(90deg, rgba(4,6,12,.9), rgba(4,6,12,.15) 35%, rgba(4,6,12,.15) 65%, rgba(4,6,12,.9)),
-    linear-gradient(180deg, rgba(4,6,12,.55), transparent 40%, rgba(4,6,12,.85));
+  background:linear-gradient(180deg, rgba(4,6,12,.35) 0%, transparent 22%, transparent 62%, rgba(4,6,12,.92) 100%);
 }
 .strip figcaption{
   position:absolute; left:clamp(20px,4vw,38px); bottom:22px; z-index:2; max-width:46ch;
@@ -536,7 +534,7 @@ blockquote cite{ display:block; margin-top:10px; font-size:13px; font-style:norm
   box-shadow:0 24px 60px -30px rgba(0,0,0,.95);
 }
 .callout__art img{
-  width:100%; height:230px; object-fit:cover; object-position:50% 38%;
+  width:100%; height:auto; display:block;
   transition:transform .9s var(--ease);
 }
 .callout:hover .callout__art img{ transform:scale(1.06); }
@@ -801,7 +799,9 @@ blockquote cite{ display:block; margin-top:10px; font-size:13px; font-style:norm
   .rank:hover{ transform:none; }
   .orb__legend{ position:static; transform:none; margin-top:22px; }
   .callout{ flex-direction:column; align-items:flex-start; text-align:left; }
-  .callout__art{ flex:1 1 auto; width:100%; order:-1; }
+  /* the column direction turns flex-basis into a height — reset both */
+  .callout__art{ flex:0 0 auto; width:100%; order:-1; }
+  .callout__body{ flex:0 0 auto; width:100%; max-width:none; }
   .lb__nav{ width:44px; height:44px; }
 }
 
